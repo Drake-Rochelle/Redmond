@@ -1,0 +1,20 @@
+VERSION 0.2.0;
+EXIT;
+/
+    VERSION X.X.X; Specifies which interpreter to use. Must be the first line of code
+    ALLOC @NAME,[VALUE]; Allocates mem for a variable and sets it's value to VALUE. Defaults to 0
+    INC @NAME; Increments an interger
+    DEC @NAME; Decrements an interger
+    GREATER ARG1,ARG2,LINE; If arg1 > arg2, call LINE LINE
+    JUMP INT; Go to line INT
+    ADDRESS LABEL; If no address is named LABEL, store the current address as LABEL, else, go to the address LABEL
+    EXIT; Exit the program
+    PRINT INPUT1,INPUT2...; Prints all inputs. Inputs can be strings, variables, or numbers
+    WINDOW MODE; Open a window for drawing. MODES: 0 = Continuous buffer, 1 = Manual buffer
+    BUFFER; Swap the window buffer if in manual buffer mode
+    PIXEL X,Y,R,G,B; Draw a pixel at (X,Y) with color (R,G,B). Will only display on buffer swap if in manaual buffer mode
+    KEY $KEY,@OUT; Increments @OUT if key $KEY is pressed.
+    @VAR = variable
+    STRING = string without spaces
+    "STRING" = string with spaces
+/

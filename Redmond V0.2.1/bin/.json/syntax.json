@@ -1,0 +1,19 @@
+{
+    "VERSION":"function",
+    "ALLOC":"function",
+    "WINDOW":"function",
+    "GREATER":"function",
+    "PIXEL":"function",
+    "ADDRESS":"function",
+    "INC":"function",
+    "DEC":"function",
+    "JUMP":"function",
+    "BUFFER":"function",
+    "EXIT":"function",
+    "SET":"function",
+    "PRINT":"function",
+    "LINE":"function",
+    "TIME":"function",
+    "INT":"function"
+}
+
