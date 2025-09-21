@@ -7,11 +7,12 @@ path = "unnamed.rdmnd"
 undo = []
 def open_file():
     global path
-    path = filedialog.askopenfilename(
+    get_path = filedialog.askopenfilename(
             title="Select a file",
             filetypes=[("Redmond", "*.rdmnd"), ("All files", "*.*")]
         )
-    if (os.path.exists(path)):
+    if (os.path.exists(get_path)and get_path!=''):
+        path = get_path
         file = open(path,"r")
         text.delete("1.0",tk.END)
         text.insert(tk.END, file.read())
@@ -31,10 +32,24 @@ def undoCommand():
         text.insert(tk.END, undo[-2])
         undo.pop()
         undo.pop()
-keyboard.add_hotkey("ctrl+s",save)
-keyboard.add_hotkey("ctrl+r",run)
-keyboard.add_hotkey("ctrl+z",undoCommand)
+
+
+def hotkey(e):
+    if e.name == "s" and e.event_type == "down" and keyboard.is_pressed("ctrl"):
+        save()
+    if e.name == "r" and e.event_type == "down" and keyboard.is_pressed("ctrl"):
+        run()
+    if e.name == "z" and e.event_type == "down" and keyboard.is_pressed("ctrl"):
+        undoCommand()
+    if e.name == "o" and e.event_type == "down" and keyboard.is_pressed("ctrl"):
+        open_file()
+
+keyboard.hook(hotkey)
 def loop_task():
+    keyboard.clear_all_hotkeys()
+    keyboard.add_hotkey("ctrl+s",save)
+    keyboard.add_hotkey("ctrl+r",run)
+    keyboard.add_hotkey("ctrl+z",undoCommand)
     new_width = int((80/1280)*window.winfo_width())
     new_height = int((30/800)*window.winfo_height())
     text.config(width=new_width, height=new_height)
