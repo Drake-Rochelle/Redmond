@@ -32,8 +32,6 @@ def undoCommand():
         text.insert(tk.END, undo[-2])
         undo.pop()
         undo.pop()
-
-
 def hotkey(e):
     if e.name == "s" and e.event_type == "down" and keyboard.is_pressed("ctrl"):
         save()
@@ -43,13 +41,8 @@ def hotkey(e):
         undoCommand()
     if e.name == "o" and e.event_type == "down" and keyboard.is_pressed("ctrl"):
         open_file()
-
 keyboard.hook(hotkey)
 def loop_task():
-    keyboard.clear_all_hotkeys()
-    keyboard.add_hotkey("ctrl+s",save)
-    keyboard.add_hotkey("ctrl+r",run)
-    keyboard.add_hotkey("ctrl+z",undoCommand)
     new_width = int((80/1280)*window.winfo_width())
     new_height = int((30/800)*window.winfo_height())
     text.config(width=new_width, height=new_height)
