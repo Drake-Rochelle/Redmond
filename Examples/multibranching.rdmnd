@@ -1,0 +1,9 @@
+REDMOND_JALLOC;    Branch 1      (Both execute the same code in parallel)
+REDMOND_CORE;      Branch 2
+NUM @A,2;          Create variable A
+NUM @B,1;          Create variable B
+NUM @C;            Create variable C
+NUM @VAR,@A,@B,@C; Create variable VAR which is the sum of A, B, and C
+PRINT @VAR;        Print VAR
+ADDRESS LOOP;      While true loop keeps console open
+ADDRESS LOOP;

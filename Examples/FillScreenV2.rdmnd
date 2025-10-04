@@ -1,0 +1,18 @@
+NUM @WIDTH,2560;              Alloc win width.
+NUM @HEIGHT,1600;             Alloc win height.
+NUM @X;                       Alloc cursor x position.
+NUM @Y;                       Alloc cursor y position.
+WINDOW 1,@WIDTH,@HEIGHT;      Create manual bufferd window.
+ADDRESS LOOP;                 Store loop address.
+PIXEL @X,@Y,255,255,255;      Paint pixel at cursor.
+INC @X;                       Move cursor over to the right one.
+GREATER @WIDTH,@X,LOOP;       If the cursor has not reached the right edge of                                 screen, repeat.
+INC @Y;                       Otherwise, move the cursor down one and
+NUM @X;                       back to the left side of the screen.
+BUFFER;                       Show the row we just drew.
+NUM @KEY;                     Alloc KEY var to hold key data.
+KEY esc,@KEY;                 If "esc" is pressed, set KEY to 1.
+GREATER @KEY,0,EXIT;          If "esc is being pressed, go back to the exit                                   address.
+GREATER @HEIGHT,@Y,LOOP;      Otherwise, if we haven't reached the bottom of the                              screen, go back to the draw loop.
+ADDRESS EXIT;                 Store the exit address for key logic.
+EXIT;                         Exit the program.

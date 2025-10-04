@@ -1,0 +1,8 @@
+NUM @X,17;
+NUM @Y,7;
+NUM @OUT;
+MIN @X,@Y,@OUT;
+PRINT @OUT;
+NUM @OUT;
+MAX @X,@Y,@OUT;
+PRINT @OUT;

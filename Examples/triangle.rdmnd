@@ -1,0 +1,14 @@
+NUM @WIDTH,2560;                             Alloc win vars.
+NUM @HEIGHT,1600;
+WINDOW 1,@WIDTH,@HEIGHT;                     Create window.
+NUM @X1,300;                                 Alloc triangle points
+NUM @Y1,300;
+NUM @X2,1200;
+NUM @Y2,900;
+NUM @X3,600;
+NUM @Y3,1200;
+RECT 0,0,@WIDTH,@HEIGHT,40,80,128;           Fill screen with a blue.
+TRIG @X1,@Y1,@X2,@Y2,@X3,@Y3,80,128,80;      Draw a green triangle.
+BUFFER;                                      Show drawing.
+ADDRESS LOOP;                                Keep window open.
+ADDRESS LOOP;

@@ -1,0 +1,15 @@
+NUM @WIDTH,400;                                        Alloc win vars.
+NUM @HEIGHT,240;
+WINDOW 0,@WIDTH,@HEIGHT;                               Create window.
+NUM @R,255;                                            Alloc colors.
+NUM @G,0;
+NUM @B,0;
+NUM @START;                                            Store start time.
+TIME @START;
+RECT 0,0,@WIDTH,@HEIGHT,@R,@G,@B;                      Draw rect.
+NUM @END;                                              Store end time.
+TIME @END;
+NUM @DIFF;                                             Store time difference.
+SUB @END,@START,@DIFF;
+PRINT @DIFF;                                           Print time difference.
+EXIT;                                                  Exit program.

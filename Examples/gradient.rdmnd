@@ -1,0 +1,18 @@
+NUM @WIDTH,400;                                        Alloc win vars.
+NUM @HEIGHT,240;
+WINDOW 0,@WIDTH,@HEIGHT;                               Create window.
+NUM @R1,255;                                           Alloc colors.
+NUM @G1,0;
+NUM @B1,0;
+NUM @R2,0;
+NUM @G2,0;
+NUM @B2,255;
+NUM @START;                                            Store start time.
+TIME @START;
+GRADIENT 0,0,@WIDTH,@HEIGHT,@R1,@G1,@B1,@R2,@G2,@B2,1; Draw gradient.
+NUM @END;                                              Store end time.
+TIME @END;
+NUM @DIFF;                                             Store time difference.
+SUB @END,@START,@DIFF;
+PRINT @DIFF;                                           Print time difference.
+EXIT;                                                  Exit program.

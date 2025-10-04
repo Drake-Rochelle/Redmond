@@ -1,0 +1,11 @@
+ADDRESS LOOP;               Forever, print from global object.
+PRINT $TEXT;
+NUM @KEY;
+KEY esc,@KEY;
+GREATER 1,@KEY,LOOP;
+EXIT;
+
+REDMOND_JALLOC;             $TEXT is global, so it can be defined anywhere.
+{
+    "$TEXT":"Hello World!!"
+}

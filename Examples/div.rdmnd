@@ -1,0 +1,5 @@
+NUM @A,9;
+NUM @B,3;
+NUM @OUT;
+DIV @A,@B,@OUT;
+PRINT @OUT;

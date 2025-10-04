@@ -1,0 +1,15 @@
+REDMOND_JALLOC;                      Tell the IDE to use the JAlloc interpreter.
+DEBUG;                               Print mem state.
+JALLOC example_data/JALLOC/num.json; Alloc objects from json file.
+{
+    "@NUM1":[
+        [342,436],
+        [252,123]
+    ]
+}
+DEBUG;                                Print mem state.
+ADDRESS LOOP;                         Keep console open.
+ADDRESS LOOP;                         
+;Can't put comment in JAlloc block.
+;First debug only has global object NUM1.
+;Second has both.

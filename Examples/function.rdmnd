@@ -1,0 +1,12 @@
+STRING $STR,"Hello World!";
+
+FUNC PRINT_STRING,$STR;      Call the PRINT_STRING function.
+
+DELETE $STR;                 Delete global object.
+PRINT "EXIT";                Print "EXIT".
+DEBUG;                       Print current memory state.
+EXIT;                        Exit.
+
+FUNC PRINT_STRING,$ARG;      Define the PRINT_STRING function.
+     PRINT $ARG;             Print global obejct str.
+RETURN;                      Return from function
