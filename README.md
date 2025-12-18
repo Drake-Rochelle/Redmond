@@ -6,7 +6,7 @@ Redmond is an interpreter and IDE for a new programming language designed with e
 <img width="1282" height="772" alt="Screenshot 2025-09-29 104116" src="https://github.com/user-attachments/assets/2b6abb8f-223d-4a94-ad07-7ffcf71493ba" />
 <img width="1282" height="752" alt="Screenshot 2025-09-29 095838" src="https://github.com/user-attachments/assets/f4ef3d14-58ad-4d5f-8503-0b766cd9c2ef" />
 
-#Example standalone script:
+# Example standalone script:
 ```
 CONTEXT "local://contexts\buffer.rdmnd";
 REDMOND_SCENE;
